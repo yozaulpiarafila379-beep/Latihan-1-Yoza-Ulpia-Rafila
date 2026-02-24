@@ -1,12 +1,11 @@
-!DOCTYPE html>
-<html>
-<head>
-  <title>Latihan 1</title>
-</head>
-<body style="text-align:center; font-family:Arial;">
+void main() {
+  const i = 20;
 
-<h1>YOZA ULPIA RAFILA</h1>
-<p>Ini coding latihan 1</p>
+  print('fibonacci($i) = ${fibonacci(i)}');
+  print('Yoza ulpia rafila');
+}
 
-</body>
-</html>
+/// Computes the nth Fibonacci number.
+int fibonacci(int n) {
+  return n < 2 ? n : (fibonacci(n - 1) + fibonacci(n - 2));
+}
