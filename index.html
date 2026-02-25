@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Tugas 1 - Latihan Dart</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Dart Yoza Ulpia Rafila</title>
 </head>
-<body style="text-align:center; font-family:Arial;">
+<body>
+  <h1>Program Dart - Fibonacci & Perkenalan</h1>
 
-<h1>Tugas 1: Latihan Coding Dart</h1>
+  <pre id="output"></pre>
 
-<!-- Link Gist -->
-<p>Source code latihan 1 (Gist):
-  <a href="https://gist.github.com/yozaulpiarafila379-beep/78b99f0fddda72cf5e9d2566ece2f408" target="_blank">
-    Lihat di Gist
-  </a>
-</p>
+  <script type="application/dart">
+    void main() {
+      const i = 20;
 
-<!-- Link DartPad -->
-<p>Source code DartPad:
-  <a href="https://dartpad.dev/016e8b411bb1d533abdfd093d49481a3" target="_blank">
-    Lihat di DartPad
-  </a>
-</p>
+      final out = StringBuffer();
+      out.writeln('fibonacci($i) = ${fibonacci(i)}');
+      out.writeln('Halo Nama Saya Yoza Ulpia Rafila');
 
-<!-- Embed DartPad langsung -->
-<h2>Preview Coding DartPad:</h2>
-<iframe 
-    src="https://dartpad.dev/embed-dart.html?id=016e8b411bb1d533abdfd093d49481a3"
-    width="100%" 
-    height="600">
-</iframe>
+      // tampilkan di <pre>
+      final pre = document.getElementById('output');
+      pre?.textContent = out.toString();
+    }
 
+    int fibonacci(int n) {
+      return n < 2 ? n : (fibonacci(n - 1) + fibonacci(n - 2));
+    }
+  </script>
+
+  <!-- Dart SDK untuk browser -->
+  <script defer src="https://dart.dev/tools/dart.js"></script>
 </body>
 </html>
